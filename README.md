@@ -67,7 +67,8 @@ The blog features a responsive, client-side search and filtering system (`BlogFi
 
 1.  **Legacy CSS Conflicts**: Initially encountered linter warnings regarding conflicting Tailwind classes (`focus-visible`) and legacy utilities (`bg-gradient`). **Solution**: Audited all components, replaced legacy classes with modern Tailwind equivalents (e.g., `bg-linear-to-br`), and cleared the Next.js build cache to resolve persistent warnings.
 2.  **3D Performance**: Integrating Three.js without impacting the main thread or LCP. **Solution**: Used `next/dynamic` for code splitting and implemented a fallback loading state for the 3D scene.
-3.  **Accessibility in Interactive Components**: Ensuring the custom blog cards and filters were fully keyboard navigable. **Solution**: Added proper `focus-visible` states and ARIA labels to all interactive elements.
+3.  **Deployment Artifacts**: The site persisted in showing the default Next.js starter page after deployment. **Solution**: Identified that the `.next` build directory was incorrectly tracked in Git. Updated `.gitignore` to exclude build artifacts and cleared the cache to ensure fresh production builds.
+4.  **Accessibility in Interactive Components**: Ensuring the custom blog cards and filters were fully keyboard navigable. **Solution**: Added proper `focus-visible` states and ARIA labels to all interactive elements.
 
 ## 🏃‍♂️ Getting Started
 
